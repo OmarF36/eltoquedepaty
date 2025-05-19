@@ -1,6 +1,25 @@
 @charset "UTF-8";
 
-/*Estilos generales para todas las pantallas*/
+/* Se recomienda iniciar por el diseño para moviles a partir de aquí
+     y luego se dice que el diseño "va creciendo" 
+     
+     Consideraciones Importantes Más Allá de las Medidas:
+
+     Mobile First: Una estrategia cada vez más recomendada es diseñar primero para la experiencia móvil
+     y luego aplicar estilos para pantallas más grandes. Esto suele resultar en un código más limpio
+     y un mejor rendimiento en dispositivos móviles.
+     
+
+
+     Unidades Relativas: Utiliza unidades como %, em, rem, vw, y vh
+     en lugar de píxeles estáticos siempre que sea posible.
+     
+     Esto ayuda a que los elementos se escalen proporcionalmente en diferentes pantallas.
+     */
+
+
+
+    /* Estilos base - móviles */
 
 body{
   font-family: Montserrat, Arial;
@@ -89,14 +108,10 @@ a img {
   z-index: 3; 
 }
 
-NUEVO CODIGO
-NUEVO CODIGO 2
 
 
-/* Teléfonos */
-@media (max-width: 480px) {
-  /* Estilos para smartphones */
-}
+
+
 
 /* Tabletas */
 @media (min-width: 600px) {
@@ -104,6 +119,7 @@ NUEVO CODIGO 2
 
 /* Laptops */
 @media (min-width: 1024px) {
+
 }
 
 /* Escritorio grande */
