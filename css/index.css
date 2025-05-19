@@ -1,3 +1,30 @@
-css del index
-hola tonotos
+@charset "UTF-8";
+
+body{
+  font-family: Montserrat, Arial;
+  background: #dfe2ec;
+  text-decoration: none;
+  color: #373a49;
+  padding-top: 0;
+}
+
+
+/*Estilos para h1-h6*/
+
+
+/*p*/
+
+
+/*Enlaces*/
+a{
+  text-decoration: none;
+  border: none;
+  color: inherit;
+}
+a img {
+  border: none; /* Elimina bordes en navegadores más antiguos */
+}
+
+
+
 
