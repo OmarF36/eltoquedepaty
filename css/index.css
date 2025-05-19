@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/*Estilos generales para todas las pantallas*/
+
 body{
   font-family: Montserrat, Arial;
   background: #dfe2ec;
@@ -7,12 +9,6 @@ body{
   color: #373a49;
   padding-top: 0;
 }
-
-
-/*Estilos para h1-h6*/
-
-
-/*p*/
 
 
 /*Enlaces*/
@@ -26,5 +22,30 @@ a img {
 }
 
 
+/*Estilos para h1-h6*/
 
 
+/*p*/
+
+
+
+
+
+
+
+/* Teléfonos */
+@media (max-width: 480px) {
+  /* Estilos para smartphones */
+}
+
+/* Tabletas */
+@media (min-width: 600px) {
+}
+
+/* Laptops */
+@media (min-width: 1024px) {
+}
+
+/* Escritorio grande */
+@media (min-width: 1440px) {
+}
