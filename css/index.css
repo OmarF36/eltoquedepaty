@@ -89,9 +89,45 @@ a img {
   z-index: 3; 
 }
 
-NUEVO CODIGO
-NUEVO CODIGO 2
+/*Carrusel carreras*/
+* {
+  box-sizing: border-box;
+}
+.carrusel_carreras {
+  width: 80%;
+  margin: 0 auto;  /* Centra el carrusel */
+  padding: 0;
+}
+.carrusel_portadas {
+  width: 100%; /* Ajusta al tamaño del carrusel */
+  margin-right: 10px;
+  height: 500px;
+  position: relative;
+}
+.carrusel_portadas img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  object-fit: cover;
+  display: block; /* Elimina el espacio extra alrededor de la imagen */
+}/*fin*/
 
+.cont1 {
+  display: flex;
+  width: 90%;
+  height: 200px;
+  margin: 0 auto;
+}
+.cont2 {
+  width: 50%;
+  height: 100%;
+  background: #373a49;
+}
+.cont3 {
+  width: 50%;
+  height: 100%;
+  background: #fe9e3e;
+}
 
 /* Teléfonos */
 @media (max-width: 480px) {

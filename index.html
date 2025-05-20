@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+
+    <!-- Flickity -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
     <!-- CSS estilos de esta página -->
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -26,6 +34,96 @@
             </div>
         <div class="circle"></div> 
     </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!---carrusel carreras--->
+<div class="carrusel_carreras js-flickity" 
+  data-flickity-options='{
+    "cellAlign": "left", 
+    "contain": true, 
+    "wrapAround": true, 
+    "autoPlay": 3000, 
+    "pauseAutoPlayOnHover": false, 
+    "prevNextButtons": true, 
+    "selectedAttraction": 0.01, 
+    "friction": 0.2 
+  }'> 
+
+  
+  <div class="carrusel_portadas">
+    <img src="img/huevos.jpg" alt="Imagen 1">
+  </div>
+  
+  <div class="carrusel_portadas">
+    <a href="informatica.html"><img src="img/huevos.jpg">
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="ambiental.html"><img src="img/huevos.jpg">
+  </div>
+  
+
+  <div class="carrusel_portadas">
+    <a href="industrial.html"><img src="img/huevos.jpg">
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="electromecanica.html"><img src="img/huevos.jpg">
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="gestion.html"><img src="img/huevos.jpg">
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="sistemas.html"><img src="img/huevos.jpg">
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="administracion.html"><img src="img/huevos.jpg">
+  </div>
+
+</div><!---fin carrusel--->
+
+<br><br><br><br><br><br>
+
+<div class="cont1">
+    <div class="cont2"></div>
+    <div class="cont3"></div>
+</div>
+
+
+
+<!-- carrusel carreras -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var flkty = new Flickity('.carrusel_carreras', {
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        autoPlay: 3000, // Cambio automático cada 3 segundos
+        pauseAutoPlayOnHover: false, 
+        prevNextButtons: true, // Habilita botones de navegación
+        selectedAttraction: 0.01,
+        friction: 0.2
+      });
+  
+        flkty.on('select', function () {
+        flkty.playPlayer(); // Reinicia el autoplay después de cualquier acción
+      });
+  
+      // Evitar que el autoplay se detenga al usar los botones de flecha
+      var prevButton = document.querySelector('.flickity-prev-next-button.previous');
+      var nextButton = document.querySelector('.flickity-prev-next-button.next');
+  
+      [prevButton, nextButton].forEach(function(button) {
+        button.addEventListener('click', function() {
+          flkty.playPlayer();
+        });
+      });
+    });
+  </script>
+
 
 </body>
 </html>
