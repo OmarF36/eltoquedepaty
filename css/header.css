@@ -11,17 +11,11 @@
 
 /* Tabletas (mínimo 600px) */
     @media (min-width: 600px) {
-      body {
-        background-color: #73bbff; /* celeste telefonos en horizontal y tabletas  */
-      }
+
     }
 
     /* Laptops (mínimo 1024px) */
     @media (min-width: 1024px) {
-      body {
-        background-color: #4ff855; /* Verde claro para laptops */
-      }
-
 
     /* Contenedor principal para los contenedores */
     .agrupador_header{

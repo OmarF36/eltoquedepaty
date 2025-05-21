@@ -14,7 +14,7 @@
 
 header {
     width: 100%;
-    position: relative;
+    position: fixed;
     margin: 0;
     padding: 0;
     align-items: center;
@@ -169,7 +169,7 @@ header nav ul li .caret {
     /* Se agrega un espacio superior de 80px al cuerpo para evitar que el contenido quede oculto detrás del menú fijo */
     body {
     margin: 0;
-        padding: 0;
+    padding: 0;
     background-color: #f7f7f7;
     }
 
