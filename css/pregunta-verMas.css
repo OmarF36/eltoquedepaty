@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/*Estilos generales para todas las pantallas*/
+
+body{
+  font-family: Montserrat, Arial;
+  background: #fdfeff;
+  text-decoration: none;
+  color: #373a49;
+  padding-top: 0;
+}
+
+
+.cont-pregunta{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 60px;
+    height: 300px;
+
+}
+
+
+.boton_pregunta {
+    padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff5e00;
+  border: 2px solid #ff5e00;
+  border-radius: 25px;
+    /**cursor: pointer;**/
+}
+
+
+.Pregunta{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: -40px;
+
+}
