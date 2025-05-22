@@ -4,6 +4,13 @@ $(document).ready(function () {
   // Asegurar que el menú esté oculto al cargar la página
   $('nav').css('left', '-100%');
 
+
+    // Solución para cerrar menú si el usuario regresa con la tecla "atrás"
+  if (performance && performance.getEntriesByType("navigation")[0]?.type === "back_forward") {
+    $('nav').css('left', '-100%'); // Oculta el menú
+    $('.children').slideUp(0);     // Cierra submenús
+  }
+
   // Mostrar/ocultar menú principal
   $('.menu_bar').click(function (event) {
     event.preventDefault();
@@ -74,3 +81,9 @@ $(document).ready(function () {
 
 
 
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    $('nav').css('left', '-100%');
+    $('.children').slideUp(0);
+  }
+});
