@@ -60,6 +60,15 @@ $(document).ready(function () {
     });
 
   });
+// Cerrar menú cuando se hace clic en cualquier enlace del menú que no tenga submenú
+$('nav > ul > li > a:not(:has(+ .children))').click(function (event) {
+  event.preventDefault();
+  const url = $(this).attr('href');
+
+  $('nav').animate({ left: '-100%' }, 300, function () {
+    window.location.href = url;
+  });
+});
 
   // Desvanecer y pegar elementos al hacer scroll
   const contenedorDesvanecer = $('#contenedorDesvanecer');

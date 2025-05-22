@@ -39,35 +39,33 @@ a img {
         
 .div1 {
   background-color: #fdfeff;
-  width: 45%;
+  width: 52%;
 }
 
 .div2 {
   overflow: hidden; 
-  width: 55%;
+  width: 48%;
   height: 620px;
   border-radius: 0 0 0 23px;
 }
 
 .logo {
   position: absolute;
-  top: 30px;
+  top: 13%;
   left: 6%;
   border-radius: 50%;
-  z-index: 2; 
 }
 
 .frasepublicitaria {
   position: absolute;
-  top: 260px;
+  top: 57%;
   left: 19%;
   font-size: 30px;
-  z-index: 2; 
 }
 
 .btn_reservas {
   position: absolute;
-  top: 420px;
+  top: 75%;
   left: 14%;
   padding: 1.4% 3% 1.4% 3%;
   color: rgb(255, 94, 0);
@@ -75,18 +73,16 @@ a img {
   font-weight: bold;
   border-radius: 30px;
   border: 3px solid rgb(255, 94, 0);;
-  z-index: 2; 
 }
 
 .circle {
   position: absolute;
-  top: 60%;
-  left: -240px; 
+  top: 77%;
+  left: -250px; 
   width: 400px;
   height: 400px;
   background: linear-gradient(45deg, #ffd13c, #fed0a6, #fed0a6, #fe9e3e, #ffd13c, #ffd13c, #ffd13c);
   border-radius: 50%;
-  z-index: 3; 
 }
 
 /*Carrusel carreras*/
@@ -97,6 +93,7 @@ a img {
   width: 80%;
   margin: 0 auto;  /* Centra el carrusel */
   padding: 0;
+  z-index: -10;
 }
 .carrusel_portadas {
   width: 100%; /* Ajusta al tamaño del carrusel */
@@ -107,27 +104,12 @@ a img {
 .carrusel_portadas img {
   width: 100%;
   height: 100%;
-  background-size: cover;
   object-fit: cover;
   display: block; /* Elimina el espacio extra alrededor de la imagen */
-}/*fin*/
+}
+/*fin carrucel carreras*/
 
-.cont1 {
-  display: flex;
-  width: 90%;
-  height: 200px;
-  margin: 0 auto;
-}
-.cont2 {
-  width: 50%;
-  height: 100%;
-  background: #373a49;
-}
-.cont3 {
-  width: 50%;
-  height: 100%;
-  background: #fe9e3e;
-}
+
 
 /* Teléfonos */
 @media (max-width: 480px) {
