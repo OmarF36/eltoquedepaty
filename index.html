@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="css/spinner.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/footer.css">
   <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="js/menu.js"></script>
 
@@ -40,8 +41,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 
-
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mooli&family=Space+Grotesk:wght@300..700&family=Special+Elite&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
   <!-- Icono pestaña -->
   <link rel="icon" href="img/logo-toque-paty.png"/>
   <!-- Titulo pestaña -->
@@ -49,9 +51,6 @@
 
 
 </head>
-
-
-<body>
 
 
 <div id="preloader">
@@ -72,46 +71,46 @@
         </div>
 
 
-          <!-- Container de los 3btn main, visible en moviles-->
-          <div class="agrupador_3btns">
+        <!-- Container de los 3btn main-->
+        <div class="agrupador_3btns">
 
-              <!-- Btn tecnmn -->
-              <div class="fant_btntecnm">
-                <a href="index.html"><img src="img/logo-toque-paty.png" width="80px"></a>&nbsp;
-              </div>
-
-
-              <div class="fant_home">
-                <a href="index.html"><img src="img/favicon/home-dark.png" width="30px"></a>&nbsp;
-              </div>
+            <!-- Btn tecnmn -->
+            <div class="fant_btntecnm">
+              <a href="index.html"><img src="img/logo-toque-paty.png" width="85px"></a>&nbsp;
+            </div>
 
 
-              <div class="menu_bar">
-                <a href="#%20" class="bt-menu">
-                  <img src="img/favicon/menu-dark.png" width="55px">
-                </a>
-              </div>
-          </div><!--end 3btn main-->
+            <div class="fant_home">
+              <a href="index.html"><img src="img/favicon/home-dark.png" width="35px"></a>&nbsp;
+            </div>
+
+
+            <div class="menu_bar">
+              <a href="#%20" class="bt-menu">
+                <img src="img/favicon/menu-dark.png" width="60px">
+              </a>
+            </div>
+        </div><!--end 3btn main-->
           
         
         <nav>
           
           <ul>
-            <li><a href="responsivo.html">Restaurante</a></li>
+            <li><a href="index.html">Restaurante</a></li>
 
-            <li><a href="responsivo.html">Ubicación</a></li>
+            <li><a href="index.html">Ubicación</a></li>
 
             <li class="submenu">
             <a href="#%20">Banquetes</a>
               <ul class="children">
-                <li><a href="responsivo.html">Sociales</a></li>
-                <li><a href="responsivo.html">Empresariales</a></li>
+                <li><a href="informatica.php">Sociales</a></li>
+                <li><a href="mecatronica.php">Empresariales</a></li>
               </ul>
             </li>
 
-            <li><a href="responsivo.html">Box Lunch</a></li>
-            <li><a href="responsivo.html">Bocadillos</a></li>
-            <li><a href="responsivo.html">Reservaciones</a></li>
+            <li><a href="index.html">Box Lunch</a></li>
+            <li><a href="index.html">Bocadillos</a></li>
+            <li><a href="index.html">Reservaciones</a></li>
 
             
           </ul>
@@ -122,16 +121,158 @@
 
 </div><!-- agrupador -->
 
+<br><br><b><br>
+
+<body>
+    <div class="cont-logo-platillo">
+        <div class="div1">
+          <div class="logo">
+              <img  src="img/logo.jpg" width="34%" alt="logo">
+          </div>
+          <div class="frasepublicitaria">
+              <b><p>Cocina auténtica, <br>pasión<span style="color: rgb(255, 94, 0);"> en cada plato.</span></p></b>
+          </div> 
+        <div class="btn_reservas">
+            Reservar mesa
+
+        </div> 
+            </div>
+            <div class="div2" >
+            <img style="position: relative; margin-top: -50px; " src="img/huevos.jpg" width="100%" alt="Imagen platillo pricipal">
+            </div>
+        <div class="circle"></div> 
+    </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!---carrusel carreras--->
+<div class="carrusel_carreras js-flickity" 
+  data-flickity-options='{
+    "cellAlign": "left", 
+    "contain": true, 
+    "wrapAround": true, 
+    "autoPlay": 3000, 
+    "pauseAutoPlayOnHover": false, 
+    "prevNextButtons": true, 
+    "selectedAttraction": 0.01, 
+    "friction": 0.2 
+  }'>
+
+  <div class="carrusel_portadas">
+    <a href="electromecanica.html"><img src="img/huevos.jpg" alt="Electromecánica"></a>
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="gestion.html"><img src="img/huevos.jpg" alt="Gestión"></a>
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="sistemas.html"><img src="img/huevos.jpg" alt="Sistemas"></a>
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="administracion.html"><img src="img/huevos.jpg" alt="Administración"></a>
+  </div>
+
+</div><!---fin carrusel--->
+
+
+<!-- carrusel carreras -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var flkty = new Flickity('.carrusel_carreras', {
+      cellAlign: 'left',
+      contain: true,
+      wrapAround: true,
+      autoPlay: 3000, // Cambio automático cada 3 segundos
+      pauseAutoPlayOnHover: false, 
+      prevNextButtons: true, // Habilita botones de navegación
+      selectedAttraction: 0.01,
+      friction: 0.2
+    });
+
+      flkty.on('select', function () {
+      flkty.playPlayer(); // Reinicia el autoplay después de cualquier acción
+    });
+
+    // Evitar que el autoplay se detenga al usar los botones de flecha
+    var prevButton = document.querySelector('.flickity-prev-next-button.previous');
+    var nextButton = document.querySelector('.flickity-prev-next-button.next');
+
+    [prevButton, nextButton].forEach(function(button) {
+      button.addEventListener('click', function() {
+        flkty.playPlayer();
+      });
+    });
+  });
+  </script>
 
 
 
-<img src="img/logo-toque-paty.png" width="80%">
-<img src="img/logo-toque-paty.png" width="80%">
-<img src="img/logo-toque-paty.png" width="80%">
-<img src="img/logo-toque-paty.png" width="80%">
-<img src="img/logo-toque-paty.png" width="80%">
-<img src="img/logo-toque-paty.png" width="80%">
-<img src="img/logo-toque-paty.png" width="80%">
+
+<!------------------------ Footer -------------------------->
+<footer>
+  <div class="cont_footer1">
+     
+        <div class="footer_item_azules">
+          <img src="img/logo-toque-paty.png" width="55%">
+          <font color="white" size="6px" >
+                  <div class="frasepubli"><br><br>"Sabor local, <br>ingredientes frescos, <br>experiencia inolvidable"</div>
+            </font>
+          
+        </div>
+        
+
+        <div class="redes-sociales-footer">
+            <br>
+            <h2>Síguenos en:</h2>
+            <br>
+            <div class="imagenes-redes">
+              <a href="https://www.facebook.com/TecNMSanAndresTuxtla?mibextid=kFxxJD"><img src="img/favicon/facebook_circular.png" width="55px"></a>&nbsp;&nbsp;
+              
+              <a href="https://www.instagram.com/tecnm_sat/profilecard/?igsh=MW1weGk5MGk3Zjhh"><img src="img/favicon/ig.png" width="55px"></a> 
+            </div>
+              
+        </div>
+
+
+        <div class="contacto-footer" >
+            <br>
+            <h2>Contactanos con un clic</h2>
+            <br>
+            <div class="contact-item">
+              <img  src="img/favicon/telefono_cuadrado.png" width="55px">&nbsp;
+              <a  href="tel:+5212949479100" class="phone-link">
+                <font color="white" size="5px" >
+                  Tel. (294) 94 79 100
+                </font>
+              </a>
+              <br>
+            </div>
+              
+            <div class="contact-item">
+              <img src="img/favicon/whatsapp.png" width="55px">&nbsp;
+              <a  href="https://mail.google.com/">
+                <font color="white" size="5px">
+                  Tel. (294) 94 79 100
+                </font>
+              </a>
+            </div>
+        </div>
+
+  </div><!--------- Fin footer 1 ------->
+
+  <div class="cont_footer2">
+        <div class="f2_1"><font color="white"><!-----Año automático----><script>document.write(new Date().getFullYear())</script> El toque de Paty | San Andrés Tuxtla</font>
+        </div>  
+  </div>
+<!--------- Footer ------->
+  <!--------- Imagen Pleca ------->
+  <div class="cont_footer4">
+      <br><br>
+  </div>
+
+</footer>
+
 
 
 
