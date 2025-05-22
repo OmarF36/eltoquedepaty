@@ -57,7 +57,7 @@ header nav ul li {
     display:inline-block;
     position: relative;
     margin: 0;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #fdfdfb;
     position: relative; /* Necesario para posicionar el pseudo-elemento */
     transition: color 0.3s ease; /* Transicion para el color del texto */
 }
@@ -102,7 +102,7 @@ header nav ul li a span {
 
 header nav ul li .children {
   display: none;
-  background-color: #f5f4f4;
+  background-color: #fdfdfb;
   position: absolute;
     top: 100%; /* Distancia debajo del elemento principal */
   width: 150%;
@@ -112,7 +112,7 @@ header nav ul li .children {
 
 header nav ul li:hover .children {
   display: block;
-  background: #f5f4f4;
+  background: #fdfdfb;
     padding-bottom: 12px;/*Interlineado de opciones secundarias*/
     background: #fdfdfb;
 }
@@ -292,7 +292,7 @@ header nav ul li .caret {
     /* con el hover se mantiene el color que tiene por defecto en version escritorio */
     header nav ul li:hover .children {
         display: none;  /* Al pasar el mouse sobre el ítem de la lista, oculta el submenú */
-        background-color: #ffffff;
+        background-color: #fdfdfb;
     }
 
     /* Estilo para los submenús dentro de los elementos de lista */
