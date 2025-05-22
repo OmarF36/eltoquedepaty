@@ -14,7 +14,7 @@
 
     }
 
-    /* Laptops (mínimo 1024px) */
+/* Laptops (mínimo 1024px) */
     @media (min-width: 1024px) {
 
     /* Contenedor principal para los contenedores */
@@ -96,8 +96,6 @@
 
 
 
-
-
     }
 
 
@@ -108,7 +106,5 @@
 
     /* Escritorio grande (mínimo 1440px) */
     @media (min-width: 1440px) {
-      body {
-        background-color: #8258d1; /* Morado suave para monitores con más resolución que una laptop*/
-      }
+
     }

@@ -5,11 +5,13 @@ $(document).ready(function () {
   $('nav').css('left', '-100%');
 
 
-    // Solución para cerrar menú si el usuario regresa con la tecla "atrás"
+  // Solución para cerrar menú si el usuario regresa con la tecla "atrás"
+
   if (performance && performance.getEntriesByType("navigation")[0]?.type === "back_forward") {
     $('nav').css('left', '-100%'); // Oculta el menú
     $('.children').slideUp(0);     // Cierra submenús
   }
+
 
   // Mostrar/ocultar menú principal
   $('.menu_bar').click(function (event) {
@@ -80,6 +82,9 @@ $(document).ready(function () {
 });
 
 
+
+
+// ⬇⬇⬇ agrega esto afuera, al final del archivo
 
 window.addEventListener("pageshow", function (event) {
   if (event.persisted) {
