@@ -1,73 +1,65 @@
 $(document).ready(function () {
-  let menuAbierto = false;
+  let contador = 1;
 
-  // Asegurar que el menú esté oculto al cargar la página
-  $('nav').css('left', '-100%');
-
-  // Mostrar/ocultar menú principal
+  // Mostrar/ocultar menú
   $('.menu_bar').click(function (event) {
     event.preventDefault();
-
-    if ($('nav').css('left') === '0px') {
-      $('nav').animate({ left: '-100%' });
-      menuAbierto = false;
-      $('.children').slideUp(400); // Cierra submenús al cerrar el menú principal
-    } else {
-      $('nav').animate({ left: '0' });
-      menuAbierto = true;
-    }
+    const left = contador ? '0' : '-100%';
+    $('nav').animate({ left });
+    contador = 1 ;
   });
-  
-  // Función para detectar si es móvil
+
+  // Verifica si la pantalla es móvil
   function esMovil() {
     return window.innerWidth <= 768;
   }
 
-  // Evento en los submenús
+  // Maneja la interacción con los submenús en dispositivos móviles y de escritorio
   $('.submenu > a').click(function (event) {
     event.preventDefault();
   });
 
-  // Submenús en escritorio (hover)
   $('.submenu').hover(
     function () {
-      if (!esMovil()) $(this).children('.children').stop(true, true).slideDown(400);
+      if (!esMovil()) $(this).children('.children').stop(true, true).slideDown(600);
     },
     function () {
-      if (!esMovil()) $(this).children('.children').stop(true, true).slideUp(400);
+      if (!esMovil()) $(this).children('.children').stop(true, true).slideUp(600);
     }
   );
 
-  // Submenús en móvil (click)
   $('.submenu').click(function (e) {
     if (esMovil()) {
-      $('.children').not($(this).children('.children')).slideUp(400); // Cierra otros submenús
-      $(this).children('.children').slideToggle(400);
+      $('.children').not($(this).children('.children')).slideUp(600);
+      $(this).children('.children').slideToggle(600);
       e.stopPropagation();
+      
     }
   });
-
-  // Redirección al hacer clic en un enlace del submenú
+  
+  // Redirige al hacer clic en un enlace del submenú
   $('.submenu .children li a').click(function (event) {
+    
     event.preventDefault();
     const url = $(this).attr('href');
-  
-    // Ocultar submenús en escritorio
-    $('.children').slideUp(350);
-  
     $('nav').animate({ left: '-100%' }, 300, function () {
       window.location.href = url;
     });
-
   });
-// Cerrar menú cuando se hace clic en cualquier enlace del menú que no tenga submenú
-$('nav > ul > li > a:not(:has(+ .children))').click(function (event) {
-  event.preventDefault();
-  const url = $(this).attr('href');
+// Retraer el menú al hacer clic en cualquier enlace del menú (excepto los que abren submenús)
+$('nav ul li a').click(function (event) {
+  const isSubmenuToggle = $(this).parent().hasClass('submenu');
+  const isMobile = esMovil();
 
-  $('nav').animate({ left: '-100%' }, 300, function () {
-    window.location.href = url;
-  });
+  if (!isSubmenuToggle || !isMobile) {
+    const url = $(this).attr('href');
+    $('nav').animate({ left: '-100%' }, 300, function () {
+      if (url && url !== '#') {
+        window.location.href = url;
+      }
+    });
+    event.preventDefault();
+  }
 });
 
   // Desvanecer y pegar elementos al hacer scroll
@@ -80,6 +72,3 @@ $('nav > ul > li > a:not(:has(+ .children))').click(function (event) {
     contenedorPegajoso.css('marginTop', scrollPosition > 50 ? '-47px' : '0');
   });
 });
-
-
-
