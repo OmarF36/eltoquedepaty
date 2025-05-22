@@ -69,6 +69,7 @@ $(document).ready(function () {
 
   });
 
+  
   // Desvanecer y pegar elementos al hacer scroll
   const contenedorDesvanecer = $('#contenedorDesvanecer');
   const contenedorPegajoso = $('#contenedorPegajoso');
