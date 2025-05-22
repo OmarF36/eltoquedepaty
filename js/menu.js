@@ -1,22 +1,26 @@
 $(document).ready(function () {
   let menuAbierto = false;
 
+  // Asegurar que el menú esté oculto al cargar la página
+  $('nav').css('left', '-100%');
+
   // Mostrar/ocultar menú principal
   $('.menu_bar').click(function (event) {
     event.preventDefault();
-    const left = menuAbierto ? '-100%' : '0';
-    $('nav').animate({ left });
-    menuAbierto = !menuAbierto;
-  
-    // Ocultar submenús cuando se cierra el menú principal
-    if (!menuAbierto) {
-      $('.children').slideUp(400);
+
+    if ($('nav').css('left') === '0px') {
+      $('nav').animate({ left: '-100%' });
+      menuAbierto = false;
+      $('.children').slideUp(400); // Cierra submenús al cerrar el menú principal
+    } else {
+      $('nav').animate({ left: '0' });
+      menuAbierto = true;
     }
   });
   
   // Función para detectar si es móvil
   function esMovil() {
-    return window.innerWidth <= 963;
+    return window.innerWidth <= 768;
   }
 
   // Evento en los submenús
@@ -54,17 +58,6 @@ $(document).ready(function () {
     $('nav').animate({ left: '-100%' }, 300, function () {
       window.location.href = url;
     });
-
-
-
-    // Recargar la página automáticamente al regresar con el botón "atrás"
-    $(window).on("pageshow", function (event) {
-      if (event.originalEvent.persisted) {
-        location.reload();
-      }
-    });
-
-
 
   });
 
