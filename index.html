@@ -11,12 +11,10 @@
   <!-- Animate.css bounce -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <!-- WOW.js bounce -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <!-- counter -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
   <!-- Flickity -->
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 
 
@@ -29,6 +27,7 @@
   <link rel="stylesheet" href="css/footer.css">
   <script src="https://code.jquery.com/jquery-latest.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/carrusel-carreras.js"></script>
 
    <!-- CSS estilos de esta página -->
   <link rel="stylesheet" href="css/index.css">
@@ -51,7 +50,7 @@
 
 
 </head>
-
+<body>
 
 <div id="preloader">
     <div class="spinner"></div>
@@ -123,88 +122,81 @@
 
 <br><br><b><br>
 
-<body>
-    <div class="cont-logo-platillo">
-        <div class="div1">
-          <div class="logo">
-              <img  src="img/logo.jpg" width="34%" alt="logo">
-          </div>
-          <div class="frasepublicitaria">
-              <b><p>Cocina auténtica, <br>pasión<span style="color: rgb(255, 94, 0);"> en cada plato.</span></p></b>
-          </div> 
-        <div class="btn_reservas">
-            Reservar mesa
 
-        </div> 
-            </div>
-            <div class="div2" >
-            <img style="position: relative; margin-top: -50px; " src="img/huevos.jpg" width="100%" alt="Imagen platillo pricipal">
-            </div>
-        <div class="circle"></div> 
+  <div class="cont-logo-platillo">
+    <div class="logo_frase">
+      <div class="logo">
+        <img  src="img/logo.jpg" width="34%" alt="logo">
+      </div>
+      <div class="frasepublicitaria">
+        <b><p>Cocina auténtica, <br>pasión<span style="color: rgb(255, 94, 0);"> en cada plato.</span></p></b>
+      </div> 
+      <div class="btn_reservas">
+        Reservar mesa
+      </div> 
     </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="imagen_principal" >
+      <img style="position: relative; margin-top: -50px; " src="img/huevos.jpg" width="100%" alt="Imagen platillo pricipal">
+    </div>
+    <div class="circle"></div> 
+  </div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <div class="titulo-sub-amarillo">
+       <p class="linea-promociones"><b>¡Promociones de Abril 2025!</b></p> 
+       
+    </div>
+
+        <div class="cont-text-sup">
+            <p class="subrayado">Todos los desayunos incluyen café y fruta</p>
+        </div>
+
+        <div class="contenedor-img-text">
+
+            <div class="cont-menu-desayuno">
+                <article class="item">
+                    <p class="flavor item">• Omelette especial acompañados <br>de hotcakes y tocino</p><p class="price"><b>$100</b></p>
+                  </article>
+                  <article class="item">
+                    <p class="flavor">• Enfrojoladas o entomatadas</p><p class="price"><b>$65</b></p>
+                  </article>
+                  <article class="item">
+                    <p class="flavor">• Chilaquiles con pollo o huevo</p><p class="price"><b>$75</b></p>
+                  </article>
+            </div>
+            
+            <div class="cont-img-desayuno">
+                <img style="position: relative; " src="img/huevos.jpg" alt="">
+            </div>
+        </div>
+            <div class="cont-text-inf">
+                <p>Servicio para llevar con costo adicional de $10 o tambien puedes traer tu recipiente</p>
+            </div>
+
+
+
 
 <!---carrusel carreras--->
-<div class="carrusel_carreras js-flickity" 
-  data-flickity-options='{
-    "cellAlign": "left", 
-    "contain": true, 
-    "wrapAround": true, 
-    "autoPlay": 3000, 
-    "pauseAutoPlayOnHover": false, 
-    "prevNextButtons": true, 
-    "selectedAttraction": 0.01, 
-    "friction": 0.2 
-  }'>
-
+<div class="carrusel_carreras">
   <div class="carrusel_portadas">
     <a href="electromecanica.html"><img src="img/huevos.jpg" alt="Electromecánica"></a>
   </div>
-
   <div class="carrusel_portadas">
     <a href="gestion.html"><img src="img/huevos.jpg" alt="Gestión"></a>
   </div>
-
   <div class="carrusel_portadas">
     <a href="sistemas.html"><img src="img/huevos.jpg" alt="Sistemas"></a>
   </div>
-
   <div class="carrusel_portadas">
     <a href="administracion.html"><img src="img/huevos.jpg" alt="Administración"></a>
   </div>
+</div>
+<!---fin carrusel--->
 
-</div><!---fin carrusel--->
 
 
-<!-- carrusel carreras -->
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var flkty = new Flickity('.carrusel_carreras', {
-      cellAlign: 'left',
-      contain: true,
-      wrapAround: true,
-      autoPlay: 3000, // Cambio automático cada 3 segundos
-      pauseAutoPlayOnHover: false, 
-      prevNextButtons: true, // Habilita botones de navegación
-      selectedAttraction: 0.01,
-      friction: 0.2
-    });
-
-      flkty.on('select', function () {
-      flkty.playPlayer(); // Reinicia el autoplay después de cualquier acción
-    });
-
-    // Evitar que el autoplay se detenga al usar los botones de flecha
-    var prevButton = document.querySelector('.flickity-prev-next-button.previous');
-    var nextButton = document.querySelector('.flickity-prev-next-button.next');
-
-    [prevButton, nextButton].forEach(function(button) {
-      button.addEventListener('click', function() {
-        flkty.playPlayer();
-      });
-    });
-  });
-  </script>
 
 
 
@@ -266,6 +258,7 @@
         </div>  
   </div>
 <!--------- Footer ------->
+
   <!--------- Imagen Pleca ------->
   <div class="cont_footer4">
       <br><br>
