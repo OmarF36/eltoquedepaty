@@ -3,11 +3,11 @@ $(document).ready(function () {
 
   // Mostrar/ocultar menú
   $('.menu_bar').click(function (event) {
-    event.preventDefault();
-    const left = contador ? '0' : '-100%';
-    $('nav').animate({ left });
-    contador = 1 ;
-  });
+  event.preventDefault();
+  const left = contador ? '0' : '-100%';
+  $('nav').animate({ left });
+  contador = contador ? 0 : 1; // alterna entre 1 y 0
+});
 
   // Verifica si la pantalla es móvil
   function esMovil() {

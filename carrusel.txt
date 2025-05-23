@@ -124,7 +124,7 @@
 
 
   <div class="cont-logo-platillo">
-    <div class="logo_frase">
+    <div class="div1">
       <div class="logo">
         <img  src="img/logo.jpg" width="34%" alt="logo">
       </div>
@@ -136,47 +136,12 @@
       </div> 
     </div>
 
-    <div class="imagen_principal" >
+    <div class="div2" >
       <img style="position: relative; margin-top: -50px; " src="img/huevos.jpg" width="100%" alt="Imagen platillo pricipal">
     </div>
     <div class="circle"></div> 
   </div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-    <div class="titulo-sub-amarillo">
-       <p class="linea-promociones"><b>¡Promociones de Abril 2025!</b></p> 
-       
-    </div>
-
-        <div class="cont-text-sup">
-            <p class="subrayado">Todos los desayunos incluyen café y fruta</p>
-        </div>
-
-        <div class="contenedor-img-text">
-
-            <div class="cont-menu-desayuno">
-                <article class="item">
-                    <p class="flavor item">• Omelette especial acompañados <br>de hotcakes y tocino</p><p class="price"><b>$100</b></p>
-                  </article>
-                  <article class="item">
-                    <p class="flavor">• Enfrojoladas o entomatadas</p><p class="price"><b>$65</b></p>
-                  </article>
-                  <article class="item">
-                    <p class="flavor">• Chilaquiles con pollo o huevo</p><p class="price"><b>$75</b></p>
-                  </article>
-            </div>
-            
-            <div class="cont-img-desayuno">
-                <img style="position: relative; " src="img/huevos.jpg" alt="">
-            </div>
-        </div>
-            <div class="cont-text-inf">
-                <p>Servicio para llevar con costo adicional de $10 o tambien puedes traer tu recipiente</p>
-            </div>
-
-
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <!---carrusel carreras--->
 <div class="carrusel_carreras">

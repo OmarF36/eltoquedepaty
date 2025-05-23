@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- Flickity -->
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+<body>
+
+    
+<div class="carrusel_carreras">
+  <div class="carrusel_portadas">
+    <a href="electromecanica.html"><img src="img/huevos.jpg" alt="Electromecánica"></a>
+  </div>
+  <div class="carrusel_portadas">
+    <a href="gestion.html"><img src="img/huevos.jpg" alt="Gestión"></a>
+  </div>
+  <div class="carrusel_portadas">
+    <a href="sistemas.html"><img src="img/huevos.jpg" alt="Sistemas"></a>
+  </div>
+  <div class="carrusel_portadas">
+    <a href="administracion.html"><img src="img/huevos.jpg" alt="Administración"></a>
+  </div>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var flkty = new Flickity('.carrusel_carreras', {
+      cellAlign: 'left',
+      contain: true,
+      wrapAround: true,
+      autoPlay: 3000,
+      pauseAutoPlayOnHover: false,
+      prevNextButtons: true,
+      selectedAttraction: 0.01,
+      friction: 0.2
+    });
+
+    flkty.on('select', function () {
+      flkty.playPlayer(); // Reinicia el autoplay después de interacción
+    });
+
+    // Asegura que botones funcionen correctamente
+    setTimeout(function () {
+      var prevButton = document.querySelector('.flickity-prev-next-button.previous');
+      var nextButton = document.querySelector('.flickity-prev-next-button.next');
+
+      [prevButton, nextButton].forEach(function (button) {
+        if (button) {
+          button.addEventListener('click', function () {
+            flkty.playPlayer();
+          });
+        }
+      });
+    }, 500); // Espera medio segundo por si Flickity tarda en renderizar botones
+  });
+</script>
+</body>
+</html>
