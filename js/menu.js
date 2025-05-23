@@ -72,3 +72,10 @@ $('nav ul li a').click(function (event) {
     contenedorPegajoso.css('marginTop', scrollPosition > 50 ? '-47px' : '0');
   });
 });
+
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    $('nav').css('left', '-100%');
+    $('.children').slideUp(0);
+  }
+});

@@ -1,63 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <!-- Flickity -->
-<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Toque de Paty</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    .left, .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .left {
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .logo-container {
+      margin-bottom: 20px;
+    }
+
+    .logo-container img {
+      max-width: 250px;
+    }
+
+    .text-container {
+      margin-bottom: 20px;
+    }
+
+    .text-container h2 {
+      font-size: 24px;
+      margin: 0;
+      color: #1a1a1a;
+    }
+
+    .text-container .resaltar {
+      color: #f97316;
+      font-weight: bold;
+    }
+
+    .button-container {
+      margin-top: 10px;
+    }
+
+    .button-container a {
+      padding: 15px 30px;
+      border: 2px solid #f97316;
+      border-radius: 15px;
+      font-size: 20px;
+      color: #f97316;
+      background-color: white;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .button-container a:hover {
+      background-color: #f97316;
+      color: white;
+    }
+
+    .right img.food {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
+  <div class="left">
 
-    
-<div class="carrusel_carreras">
-  <div class="carrusel_portadas">
-    <a href="electromecanica.html"><img src="img/huevos.jpg" alt="Electromecánica"></a>
+    <div class="logo-container">
+      <img src="img/logo.jpg" alt="Logo El Toque de Paty" />
+    </div>
+
+    <div class="text-container">
+      <h2>
+        Cocina auténtica,<br />
+        pasión <span class="resaltar">en cada plato.</span>
+      </h2>
+    </div>
+
+    <div class="button-container">
+      <a href="#">Reservar mesa</a>
+    </div>
   </div>
-  <div class="carrusel_portadas">
-    <a href="gestion.html"><img src="img/huevos.jpg" alt="Gestión"></a>
+
+  <div class="right">
+    <img class="food" src="img/huevos.jpg" alt="Plato de desayuno" />
   </div>
-  <div class="carrusel_portadas">
-    <a href="sistemas.html"><img src="img/huevos.jpg" alt="Sistemas"></a>
-  </div>
-  <div class="carrusel_portadas">
-    <a href="administracion.html"><img src="img/huevos.jpg" alt="Administración"></a>
-  </div>
-</div>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    var flkty = new Flickity('.carrusel_carreras', {
-      cellAlign: 'left',
-      contain: true,
-      wrapAround: true,
-      autoPlay: 3000,
-      pauseAutoPlayOnHover: false,
-      prevNextButtons: true,
-      selectedAttraction: 0.01,
-      friction: 0.2
-    });
-
-    flkty.on('select', function () {
-      flkty.playPlayer(); // Reinicia el autoplay después de interacción
-    });
-
-    // Asegura que botones funcionen correctamente
-    setTimeout(function () {
-      var prevButton = document.querySelector('.flickity-prev-next-button.previous');
-      var nextButton = document.querySelector('.flickity-prev-next-button.next');
-
-      [prevButton, nextButton].forEach(function (button) {
-        if (button) {
-          button.addEventListener('click', function () {
-            flkty.playPlayer();
-          });
-        }
-      });
-    }, 500); // Espera medio segundo por si Flickity tarda en renderizar botones
-  });
-</script>
 </body>
 </html>
