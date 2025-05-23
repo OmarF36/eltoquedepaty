@@ -11,7 +11,7 @@ $(document).ready(function () {
 
   // Verifica si la pantalla es móvil
   function esMovil() {
-    return window.innerWidth <= 768;
+    return window.innerWidth <= 963;
   }
 
   // Maneja la interacción con los submenús en dispositivos móviles y de escritorio
