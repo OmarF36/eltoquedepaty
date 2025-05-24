@@ -37,7 +37,7 @@ footer{
     display: flex; /* Usar flexbox para alinear horizontalmente */
     justify-content: space-between; /* Espaciado entre elementos */
     background: rgb(255, 72, 0);
-    padding: 3% 6% 5% 6%;
+    padding: 2% 6% 2% 6%;
     color: white;
     text-align: left; /* Alinea el texto dentro de los contenedores a la izquierda */
 
@@ -162,29 +162,34 @@ footer{
   }
 
 /*--------------------------------*/
+.cont_footer1{
+  margin-top: 10%;
+}
+
+
   .cont_footer1,
-  .cont_footer2,
-  .cont_footer3 {
+  .cont_footer2{
     padding-top: 3%;
     flex-direction: column; /* Apilar elementos verticalmente en móviles */
-    align-items: center; /* Centrar elementos apilados */
     padding-left: 8%;
-  }
-
-  .cont_footer4{
-    height: 100%;
+    
   }
 
   .footer-item_azules {
       width: 100%; /* Hacer que cada elemento ocupe todo el ancho disponible */
       margin-bottom: 5%; /* Espaciado entre elementos apilados */
     }
+
+  .redes-sociales-footer {
+    width: 100%;
+  }
+  .contacto-footer {
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+  }
   
   .f2_1{
-    width: 90%;
-    margin: 6%;
-  }
-  .f2_2{
     width: 90%;
     margin: 6%;
   }
