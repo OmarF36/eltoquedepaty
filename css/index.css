@@ -247,6 +247,38 @@ a img {
 @media (max-width: 540px) {
   /* Estilos para smartphones */
 
+
+  /*ESTILO PROMOCIONES*/
+  .contenedor-img-text {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .cont-menu-desayuno {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+
+  .cont-img-desayuno {
+    width: 100%;
+    height: 200px; 
+  }
+
+  .item {
+    padding: 5% 0 5% 0;
+    font-size: 15px;        
+  }
+  
+/*CARRUSEL*/
+.carrusel_carreras {
+  width: 90%;
+}
+.carrusel_portadas {
+  height: 200px;
+  margin-bottom: 3%;
+}
+
 }
 
 /* Tabletas */
