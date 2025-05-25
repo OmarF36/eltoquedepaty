@@ -269,6 +269,14 @@ a img {
     padding: 5% 0 5% 0;
     font-size: 15px;        
   }
+  .cont-text-sup{     /** TEXTO DE ARRIBA**/
+    font-size: 17px;
+}
+
+
+.cont-text-inf{   /** TEXTO DE ABAJO**/
+    font-size: 17px;
+}
   
 /*CARRUSEL*/
 .carrusel_carreras {

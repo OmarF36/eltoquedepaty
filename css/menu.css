@@ -10,6 +10,7 @@
 
 .menu_bar {
   display:none;
+  
 }
 
 header {
@@ -23,6 +24,7 @@ header {
     background-color: #fdfdfb;
     font-size: 105%;
     box-shadow: 0 2px 8px rgba(26, 25, 25, 0.219); /* Sombra: desplazamiento-x | desplazamiento-y | desenfoque | propagación | color */
+    z-index:1000;
 }
 
 
@@ -164,7 +166,7 @@ header nav ul li .caret {
 
 
 
-@media (max-width: 963px) {
+@media (max-width: 983px) {
   
     /* Se agrega un espacio superior de 80px al cuerpo para evitar que el contenido quede oculto detrás del menú fijo */
 
@@ -266,6 +268,7 @@ header nav ul li .caret {
         border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Un borde inferior blanco semitransparente */
         padding-left: 5%;
         text-align: left;
+        
     }
 
 
@@ -286,6 +289,7 @@ header nav ul li .caret {
     header nav ul li .children {
         display: none;  
         background-color: #fdfdfb;
+        
     }
     
     /* Oculta los elementos hijos (submenús) cuando se pasa el mouse sobre el ítem del menú */
@@ -293,6 +297,7 @@ header nav ul li .caret {
     header nav ul li:hover .children {
         display: none;  /* Al pasar el mouse sobre el ítem de la lista, oculta el submenú */
         background-color: #fdfdfb;
+        
     }
 
     /* Estilo para los submenús dentro de los elementos de lista */

@@ -44,7 +44,6 @@ footer{
 }
 .cont_footer2{
     display: flex; /* Usar flexbox para alinear horizontalmente */
-    justify-content: space-between; /* Espaciado entre elementos */
     background: rgb(255, 72, 0);
     text-decoration: none;
     color: white;
@@ -72,13 +71,14 @@ footer{
   display: flex;
   flex-direction: column; /* Texto arriba, imágenes abajo */
   align-items: flex-start; /* Alineado a la izquierda */
-  gap: 15px;
+  gap: 5px;
   font-weight: 300;
 }
 
 .imagenes-redes {
   display: flex;
-  gap: 20px; /* Espacio entre imágenes */
+  gap: 10px; /* Espacio entre imágenes */
+  
 }
 
 
@@ -90,7 +90,7 @@ footer{
   flex-direction: column;
   align-items: center;
   text-align: left;
-  gap: 15px;
+  gap: 5px;
   font-weight: 300;
 }
 
@@ -98,6 +98,7 @@ footer{
   display: flex;
   align-items: center; /* Centra verticalmente ícono y texto */
   gap: 10px;            /* Espacio entre ícono y texto */
+  margin-bottom: 2%;
 }
 
 
@@ -167,11 +168,9 @@ footer{
 }
 
 
-  .cont_footer1,
-  .cont_footer2{
-    padding-top: 3%;
+  .cont_footer1{
+    padding-top: 2%;
     flex-direction: column; /* Apilar elementos verticalmente en móviles */
-    padding-left: 8%;
     
   }
 
@@ -182,11 +181,23 @@ footer{
 
   .redes-sociales-footer {
     width: 100%;
-  }
+    gap: 0px;
+    margin-top: 12%;
+    }
+    .imagenes-redes {
+    gap: 0px; /* Espacio entre imágenes */
+    margin-bottom: 4%;
+    }
   .contacto-footer {
     text-align: left;
     align-items: flex-start;
     width: 100%;
+    gap: 0px;
+    margin-top: 6%;
+  }
+  .contact-item{
+    margin-top: 0px;
+    margin-bottom: 15px;
   }
   
   .f2_1{
@@ -194,7 +205,7 @@ footer{
     margin: 6%;
   }
 
- }/*fin condicion moviles*/
+  }/*fin condicion moviles*/
 
 
 
