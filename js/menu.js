@@ -11,7 +11,7 @@ $(document).ready(function () {
 
   // Verifica si la pantalla es móvil
   function esMovil() {
-    return window.innerWidth <= 963;
+    return window.innerWidth <= 983;
   }
 
   // Maneja la interacción con los submenús en dispositivos móviles y de escritorio
@@ -71,4 +71,11 @@ $('nav ul li a').click(function (event) {
     contenedorDesvanecer.toggleClass('oculto', scrollPosition > 50);
     contenedorPegajoso.css('marginTop', scrollPosition > 50 ? '-47px' : '0');
   });
+});
+
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    $('nav').css('left', '-100%');
+    $('.children').slideUp(0);
+  }
 });
