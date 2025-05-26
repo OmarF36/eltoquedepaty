@@ -1,164 +1,30 @@
-<<<<<<< HEAD
-$(document).ready(function () {
-  let contador = 1;
-
-  // Mostrar/ocultar menú
-  $('.menu_bar').click(function (event) {
-  event.preventDefault();
-  const left = contador ? '0' : '-100%';
-  $('nav').animate({ left });
-  contador = contador ? 0 : 1; // alterna entre 1 y 0
-});
-
-  // Verifica si la pantalla es móvil
-  function esMovil() {
-    return window.innerWidth <= 983;
-  }
-
-  // Maneja la interacción con los submenús en dispositivos móviles y de escritorio
-  $('.submenu > a').click(function (event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  var flkty = new Flickity('.carrusel_carreras', {
+    cellAlign: 'left',
+    contain: true,
+    wrapAround: true,
+    autoPlay: 3000,
+    pauseAutoPlayOnHover: false,
+    prevNextButtons: true,
+    selectedAttraction: 0.01,
+    friction: 0.2
   });
 
-  $('.submenu').hover(
-    function () {
-      if (!esMovil()) $(this).children('.children').stop(true, true).slideDown(600);
-    },
-    function () {
-      if (!esMovil()) $(this).children('.children').stop(true, true).slideUp(600);
-    }
-  );
-
-  $('.submenu').click(function (e) {
-    if (esMovil()) {
-      $('.children').not($(this).children('.children')).slideUp(600);
-      $(this).children('.children').slideToggle(600);
-      e.stopPropagation();
-      
-    }
+  flkty.on('select', function () {
+    flkty.playPlayer(); // Reinicia el autoplay después de interacción
   });
-  
-  // Redirige al hacer clic en un enlace del submenú
-  $('.submenu .children li a').click(function (event) {
-    
-    event.preventDefault();
-    const url = $(this).attr('href');
-    $('nav').animate({ left: '-100%' }, 300, function () {
-      window.location.href = url;
-    });
-  });
-// Retraer el menú al hacer clic en cualquier enlace del menú (excepto los que abren submenús)
-$('nav ul li a').click(function (event) {
-  const isSubmenuToggle = $(this).parent().hasClass('submenu');
-  const isMobile = esMovil();
 
-  if (!isSubmenuToggle || !isMobile) {
-    const url = $(this).attr('href');
-    $('nav').animate({ left: '-100%' }, 300, function () {
-      if (url && url !== '#') {
-        window.location.href = url;
+  // Asegura que botones funcionen correctamente
+  setTimeout(function () {
+    var prevButton = document.querySelector('.flickity-prev-next-button.previous');
+    var nextButton = document.querySelector('.flickity-prev-next-button.next');
+
+    [prevButton, nextButton].forEach(function (button) {
+      if (button) {
+        button.addEventListener('click', function () {
+          flkty.playPlayer();
+        });
       }
     });
-    event.preventDefault();
-  }
-});
-
-  // Desvanecer y pegar elementos al hacer scroll
-  const contenedorDesvanecer = $('#contenedorDesvanecer');
-  const contenedorPegajoso = $('#contenedorPegajoso');
-
-  $(window).scroll(function () {
-    const scrollPosition = $(this).scrollTop();
-    contenedorDesvanecer.toggleClass('oculto', scrollPosition > 50);
-    contenedorPegajoso.css('marginTop', scrollPosition > 50 ? '-47px' : '0');
-  });
-});
-
-window.addEventListener("pageshow", function (event) {
-  if (event.persisted) {
-    $('nav').css('left', '-100%');
-    $('.children').slideUp(0);
-  }
-=======
-$(document).ready(function () {
-  let contador = 1;
-
-  // Mostrar/ocultar menú
-  $('.menu_bar').click(function (event) {
-  event.preventDefault();
-  const left = contador ? '0' : '-100%';
-  $('nav').animate({ left });
-  contador = contador ? 0 : 1; // alterna entre 1 y 0
-});
-
-  // Verifica si la pantalla es móvil
-  function esMovil() {
-    return window.innerWidth <= 983;
-  }
-
-  // Maneja la interacción con los submenús en dispositivos móviles y de escritorio
-  $('.submenu > a').click(function (event) {
-    event.preventDefault();
-  });
-
-  $('.submenu').hover(
-    function () {
-      if (!esMovil()) $(this).children('.children').stop(true, true).slideDown(600);
-    },
-    function () {
-      if (!esMovil()) $(this).children('.children').stop(true, true).slideUp(600);
-    }
-  );
-
-  $('.submenu').click(function (e) {
-    if (esMovil()) {
-      $('.children').not($(this).children('.children')).slideUp(600);
-      $(this).children('.children').slideToggle(600);
-      e.stopPropagation();
-      
-    }
-  });
-  
-  // Redirige al hacer clic en un enlace del submenú
-  $('.submenu .children li a').click(function (event) {
-    
-    event.preventDefault();
-    const url = $(this).attr('href');
-    $('nav').animate({ left: '-100%' }, 300, function () {
-      window.location.href = url;
-    });
-  });
-// Retraer el menú al hacer clic en cualquier enlace del menú (excepto los que abren submenús)
-$('nav ul li a').click(function (event) {
-  const isSubmenuToggle = $(this).parent().hasClass('submenu');
-  const isMobile = esMovil();
-
-  if (!isSubmenuToggle || !isMobile) {
-    const url = $(this).attr('href');
-    $('nav').animate({ left: '-100%' }, 300, function () {
-      if (url && url !== '#') {
-        window.location.href = url;
-      }
-    });
-    event.preventDefault();
-  }
-});
-
-  // Desvanecer y pegar elementos al hacer scroll
-  const contenedorDesvanecer = $('#contenedorDesvanecer');
-  const contenedorPegajoso = $('#contenedorPegajoso');
-
-  $(window).scroll(function () {
-    const scrollPosition = $(this).scrollTop();
-    contenedorDesvanecer.toggleClass('oculto', scrollPosition > 50);
-    contenedorPegajoso.css('marginTop', scrollPosition > 50 ? '-47px' : '0');
-  });
-});
-
-window.addEventListener("pageshow", function (event) {
-  if (event.persisted) {
-    $('nav').css('left', '-100%');
-    $('.children').slideUp(0);
-  }
->>>>>>> f76bf6dfae3ce359acecf9ef441cd7352a50c3e7
+  }, 500); // Espera medio segundo por si Flickity tarda en renderizar botones
 });
