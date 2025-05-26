@@ -1,0 +1,302 @@
+@charset "UTF-8";
+
+/*Estilos generales para todas las pantallas*/
+
+body{
+  font-family: Montserrat, Arial;
+  background: #fdfeff;
+  text-decoration: none;
+  color: #373a49;
+  padding-top: 0;
+}
+
+
+/*Enlaces*/
+a{
+  text-decoration: none;
+  border: none;
+  color: inherit;
+}
+a img {
+  border: none; /* Elimina bordes en navegadores más antiguos */
+}
+
+
+/*Estilos para h1-h6*/
+
+
+/*p*/
+
+
+
+/*Estilos index*/
+.cont-logo-platillo {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  margin: 0 auto;
+}
+        
+.logo_frase {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items:end;
+  background-color: #fdfeff;
+  width: 52%;
+  z-index: -1;
+}
+
+
+
+
+.imagen_principal {
+  overflow: hidden; 
+  width: 48%;
+  height: 620px;
+  border-radius: 0 0 0 23px;
+  z-index: -1;
+}
+
+.logo {
+  text-align: center;
+  
+  width: 100%;
+  margin-top: 5%;
+  padding-right: 40%;
+  padding-left: 10%;
+  /*position: absolute;
+  top: 13%;
+  left: 6%;
+  border-radius: 50%;*/
+  z-index: -1;
+}
+.logo img {
+  width: 90%;
+  
+}
+
+.frasepublicitaria {
+  width: 100%;
+  font-size: 190%;
+  padding: 0 0 5% 40%;
+  z-index: -1;
+}
+
+.btn_reservas {
+  width: 100%;
+}
+
+.btn_reservas p{
+  text-align: center;
+  margin-left: 28%;
+  margin-right: 28%;
+  padding: 2% 3% 2% 3%;
+  color: rgb(255, 94, 0);
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 3px solid rgb(255, 94, 0);
+  z-index: -1;
+}
+
+.circle {
+  position: absolute;
+  top: 77%;
+  left: -250px; 
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(45deg, #ffd13c, #fed0a6, #fed0a6, #fe9e3e, #ffd13c, #ffd13c, #ffd13c);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
+/*PROMOCIONES*/
+
+.linea-promociones{
+    display: inline-block;
+    border-bottom: 7px solid rgb(252, 248, 5);
+    padding-bottom: 7px;
+
+
+}
+
+.titulo-sub-amarillo{         /** TEXTO PRINCIPAL AMARILLO CON NARANJITA**/
+    color: #BF6710;
+    font-size: 35px;
+    margin: 0 0 -3% 5%;
+    letter-spacing: 2.5px;
+}
+
+
+.cont-text-sup{     /** TEXTO DE ARRIBA**/
+    padding: 15px;
+    width: 90%;
+    margin:4% auto 2% auto;
+    font-size: 20px;
+    text-align : center;
+}
+
+.subrayado{
+    
+    display: inline-block;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-bottom: 1px;
+}
+
+.cont-text-inf{   /** TEXTO DE ABAJO**/
+    width: 90%;
+    margin: 10px auto;
+    font-size: 20px;
+    text-align : center;
+    padding: 2% 0 4% 0;
+    opacity: 83%;
+}
+ 
+
+.contenedor-img-text{   /** CONTENDOR DE TEXTO E IMAGEN**/
+    display: flex;
+    width: 90%;
+    gap: 2%;
+    margin: 0 auto;
+}
+
+  
+
+.cont-img-desayuno{       /** IMAGEN**/
+    width: 50%;
+    height: 350px;
+    overflow: hidden;   
+    z-index: -1;
+    
+}
+.cont-img-desayuno img{
+    background-color: red;
+    width: 100%;   
+}
+
+
+.cont-menu-desayuno{                /** TEXTO DE MENU**/
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 50%;
+    padding: 20px;             
+  }
+  
+  .item {
+    display: flex;            
+    justify-content: space-between;
+    align-items: center;
+    
+    text-align : center;
+    padding: 20px 0;  
+    font-size: 20px;        
+  }
+  
+  
+  .flavor {
+    text-align: left;
+    width: 75%;
+    padding-left: 10px;        
+  }
+  
+  
+  .price {
+    text-align: right;
+    width: 25%;
+    padding-right: 10px;     
+    color: #BF6710;  
+  }
+
+
+
+
+
+
+/*Carrusel */
+* {
+  box-sizing: border-box;
+}
+.carrusel_carreras {
+  width: 80%;
+  margin: 0 auto;  /* Centra el carrusel */
+  padding: 0;
+  
+  z-index: 0;
+}
+.carrusel_portadas {
+  width: 100%; /* Ajusta al tamaño del carrusel */
+  margin-right: 10px;
+  height: 500px;
+  position: relative;
+}
+.carrusel_portadas img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* Elimina el espacio extra alrededor de la imagen */
+  
+}
+/*fin carrucel carreras*/
+
+
+
+/* Teléfonos */
+@media (max-width: 540px) {
+  /* Estilos para smartphones */
+
+
+  /*ESTILO PROMOCIONES*/
+  .contenedor-img-text {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .cont-menu-desayuno {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+
+  .cont-img-desayuno {
+    width: 100%;
+    height: 200px; 
+  }
+
+  .item {
+    padding: 5% 0 5% 0;
+    font-size: 15px;        
+  }
+  .cont-text-sup{     /** TEXTO DE ARRIBA**/
+    font-size: 17px;
+}
+
+
+.cont-text-inf{   /** TEXTO DE ABAJO**/
+    font-size: 17px;
+}
+  
+/*CARRUSEL*/
+.carrusel_carreras {
+  width: 90%;
+}
+.carrusel_portadas {
+  height: 200px;
+  margin-bottom: 3%;
+}
+
+}
+
+/* Tabletas */
+@media (min-width: 600px) {
+}
+
+/* Laptops */
+@media (min-width: 1024px) {
+}
+
+/* Escritorio grande */
+@media (min-width: 1440px) {
+}
