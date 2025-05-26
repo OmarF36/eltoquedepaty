@@ -1,0 +1,114 @@
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+
+
+
+
+/* Tabletas (mínimo 600px) */
+  @media (min-width: 600px) {
+
+  }
+
+  /* Laptops (mínimo 1024px) */
+  @media (min-width: 1024px) {
+
+  /* Contenedor principal para los contenedores */
+  .agrupador_header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+  }
+
+  .mini_cont{
+    margin: 0;
+    width: 30%;
+    display: flex; /* Cambiamos a flex para permitir centrado vertical */
+    align-items: center; /* Centrado vertical del contenido dentro de mini_cont */
+    justify-content: center; /* Centrado horizontal del contenido dentro de mini_cont */
+    text-decoration: none;
+    font-size: 13px;
+  }  
+  .mini_cont a {
+    color: #9c9cad;
+  }
+  .mini_cont a:hover{
+    color: white;
+  }
+  #mc_derecha{
+    margin: 0;
+    width: 30%;
+    padding-top: 7px;
+    display: flex; /* Cambiamos a flex para permitir centrado vertical */
+    align-items: center; /* Centrado vertical del contenido dentro de mini_cont */
+    justify-content: center; /* Centrado horizontal del contenido dentro de mini_cont */
+    text-decoration: none;
+    font-size: 13px;
+
+  } 
+
+
+
+
+
+
+
+  /* Contenedor 2 para desvanecer */
+  #contenedorDesvanecer {
+    background-color: white;
+    margin: 0;
+    align-items: center;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+  }
+
+  /* Contenedor 3 para pegarse al contenedor 1 */
+  #contenedorPegajoso {
+    background-color: #253576;
+    transition: margin-top 0.5s ease; /* Suavidad en el movimiento hacia arriba */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Efecto de desvanecimiento en el scroll para el contenedor 2 */
+  .oculto {
+    opacity: 0;
+    height: 0; /* Ajusta la altura para eliminar el espacio */
+    pointer-events: none;
+  }
+
+  /* Espacio de contenido principal */
+  .contenido {
+    padding-top: 180px; /* Espacio para no cubrir los contenedores */
+    height: 200vh; /* Para tener suficiente espacio de scroll */
+    background-color: #f3f3f3;
+  }
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+  /* Escritorio grande (mínimo 1440px) */
+  @media (min-width: 1440px) {
+    body {
+      background-color: #8258d1; /* Morado suave para monitores con más resolución que una laptop*/
+    }
+  }
