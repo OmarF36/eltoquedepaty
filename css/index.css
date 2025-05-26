@@ -48,20 +48,17 @@ a img {
   z-index: -1;
 }
 
-
-
-
 .imagen_principal {
   overflow: hidden; 
   width: 48%;
   height: 620px;
+  margin: 0 auto ;
   border-radius: 0 0 0 23px;
   z-index: -1;
 }
 
 .logo {
   text-align: center;
-  
   width: 100%;
   margin-top: 5%;
   padding-right: 40%;
@@ -88,8 +85,8 @@ a img {
 .btn_reservas {
   text-align: center;
   margin-left: 28%;
-  margin-right: 28%;
-  padding: 2% 3% 2% 3%;
+  margin-right: 28%; 
+  padding: 3% 4% 3% 4%;
   color: rgb(255, 94, 0);
   font-size: 30px;
   font-weight: bold;
