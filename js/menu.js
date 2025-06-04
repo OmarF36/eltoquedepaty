@@ -3,11 +3,34 @@ $(document).ready(function () {
 
   // Mostrar/ocultar menú
   $('.menu_bar').click(function (event) {
-  event.preventDefault();
-  const left = contador ? '0' : '-100%';
-  $('nav').animate({ left });
-  contador = contador ? 0 : 1; // alterna entre 1 y 0
+    event.preventDefault();
+
+    const nav = $('nav');
+    const isMenuVisible = nav.css('left') === '0px';
+
+    if (isMenuVisible) {
+      nav.animate({ left: '-100%' });
+    } else {
+      nav.animate({ left: '0' });
+    }
+  });
+
+// Cierra el menú si se hace clic fuera de él
+$(document).click(function (event) {
+  const $target = $(event.target);
+  const nav = $('nav');
+  const isMenuVisible = nav.css('left') === '0px';
+
+  if (
+    isMenuVisible &&
+    !$target.closest('nav').length &&
+    !$target.closest('.menu_bar').length
+  ) {
+    nav.animate({ left: '-100%' });
+    $('.children').slideUp(600); // también cerramos submenús si están abiertos
+  }
 });
+
 
   // Verifica si la pantalla es móvil
   function esMovil() {
@@ -77,5 +100,6 @@ window.addEventListener("pageshow", function (event) {
   if (event.persisted) {
     $('nav').css('left', '-100%');
     $('.children').slideUp(0);
+    contador = 1; // Reestablece el contador para que el menú funcione con un solo clic
   }
 });
