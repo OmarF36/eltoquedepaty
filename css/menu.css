@@ -211,7 +211,7 @@ header nav ul li .caret {
         margin: 0; 
         width: 30%;/* Ocupa todo el ancho de la pantalla */
         height: 90%;   
-        padding: 5%;
+        padding: 3% 5%;
         text-align: center;
         justify-content: center;
     }
