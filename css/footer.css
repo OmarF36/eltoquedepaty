@@ -27,13 +27,13 @@
 
 /* -----------------------Footer -------------------------*/
 footer{
-    margin-top: 5%;
+    margin-top: 1%;
     text-decoration: none;
 }
 
 /* Estilos para los contenedores del footer */
 .cont_footer1{
-  width: 100%;
+    width: 100%;
     display: flex; /* Usar flexbox para alinear horizontalmente */
     justify-content: space-between; /* Espaciado entre elementos */
     background: rgb(255, 72, 0);
@@ -155,7 +155,7 @@ footer{
 
 
 /*Estilos para TELEFONOS*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 540px) {
 /* Reglas de estilo para tamaños de pantalla de hasta 768 píxeles de ancho */
   .btn_enviawsp{
     width: 85%;
