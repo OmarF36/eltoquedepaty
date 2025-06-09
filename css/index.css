@@ -411,6 +411,16 @@ cursor: pointer;
   }
 }
 
+@media (max-width: 800px) and (min-width: 541px) {
+  .logo img {
+  margin-top: 1.8vh;
+}
+  .frasepublicitaria {
+    margin: 1.5vh 0;
+ }
+
+}
+
 /* Tabletas */
 @media (max-width: 983px) and (min-width: 541px) {
 
@@ -426,9 +436,6 @@ cursor: pointer;
   width: 52%;
   padding: 0% 0 5% 0;
 }
-
-
-
 .imagen_principal {
   width: 48%;
   height: 100%;
@@ -463,20 +470,23 @@ cursor: pointer;
   width: 100%;
   font-size: clamp(1.2rem, 2.5vw, 2.5rem);
   padding: 0 5% 5% 12vw;
+  /*margin: 2vh 0;*/
 }
 
 
 .circle {
   position: absolute;
-  top: 100%;
-  left: -220px; /* La mitad del ancho del círculo */
-  width: 360px;
-  height: 360px;
+  left: calc(-1 * clamp(80px, 16vw, 160px)); /* mitad del ancho */
+  top: clamp(80%, 86%, 92%);
+
+  width: clamp(160px, 26vw, 320px);   /* MÁS grande desde el inicio */
+  height: clamp(160px, 26vw, 320px);
   background: linear-gradient(70deg, #ffd13c, #fed0a6, #fed0a6, #fe9e3e, #ffd13c);
   border-radius: 50%;
   transform: translateY(-50%);
-  /*z-index: 0;*/
+  /* z-index: 0; */
 }
+
 
 .btn_reservas {
   width: clamp(150px, 20vw, 800px);  /* más ancho al inicio */
@@ -494,21 +504,38 @@ cursor: pointer;
 
 
 
+
 .circle2 {
   position: absolute;
-  
-  top: -14%;
-  right: -440px; /* La mitad del ancho del círculo */
-  width: 700px;
-  height: 700px;
-  background: linear-gradient(50deg,#ffd13c, #fe9e3e, #fed0a6, #fed0a6,#ffd13c);
+  top: -4vh;
+  left: clamp(5vw, 23vw, 28vw);  /* Mín 5vw, preferido 10vw, máx 25vw */
+  width: clamp(540px, 80vw, 550px);
+  height: clamp(450px, 75vw, 500px);
+  background: linear-gradient(50deg, #ffd13c, #fe9e3e, #fed0a6, #fed0a6, #ffd13c);
   border-radius: 50%;
   opacity: 0.95;
   transform: translateY(-50%);
-  clip-path: inset(0 62.8% 0 0);
-  /*z-index: 0;*/
-
+  clip-path: inset(0 50% 0 0);
 }
+
+
+
+
+
+/*PROMOCIONES DEL MES*/
+.titulo-sub-amarillo{         /** TEXTO PRINCIPAL AMARILLO CON NARANJITA**/
+    margin: 5% 0 0 5%;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 }
