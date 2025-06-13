@@ -256,7 +256,6 @@ a img {
 
 
 /*texto y boton ver más*/
-
 .cont-pregunta{
   display:flex;
   flex-direction: column;
@@ -289,6 +288,9 @@ cursor: pointer;
 .boton_pregunta:hover {
   transform: scale(1.03);
 }
+
+
+
 
 
 /* Teléfonos */
@@ -411,6 +413,11 @@ cursor: pointer;
   }
 }
 
+
+
+
+
+
 @media (max-width: 800px) and (min-width: 541px) {
   .logo img {
   margin-top: 1.8vh;
@@ -420,6 +427,12 @@ cursor: pointer;
  }
 
 }
+
+
+
+
+
+
 
 /* Tabletas */
 @media (max-width: 983px) and (min-width: 541px) {
@@ -451,7 +464,6 @@ cursor: pointer;
   /*z-index: -1;*/
 }
 
-
 .imagen_principal_movil {
   display: none;
 }
@@ -473,7 +485,6 @@ cursor: pointer;
   /*margin: 2vh 0;*/
 }
 
-
 .circle {
   position: absolute;
   left: calc(-1 * clamp(80px, 16vw, 160px)); /* mitad del ancho */
@@ -486,7 +497,6 @@ cursor: pointer;
   transform: translateY(-50%);
   /* z-index: 0; */
 }
-
 
 .btn_reservas {
   width: clamp(150px, 20vw, 800px);  /* más ancho al inicio */
@@ -502,9 +512,6 @@ cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
 
-
-
-
 .circle2 {
   position: absolute;
   top: -4vh;
@@ -518,27 +525,17 @@ cursor: pointer;
   clip-path: inset(0 50% 0 0);
 }
 
-
-
-
-
 /*PROMOCIONES DEL MES*/
 .titulo-sub-amarillo{         /** TEXTO PRINCIPAL AMARILLO CON NARANJITA**/
     margin: 5% 0 0 5%;
 }
 
 
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
 
 
 
@@ -557,3 +554,5 @@ cursor: pointer;
   height: 400px;
 }*/
 }
+
+
