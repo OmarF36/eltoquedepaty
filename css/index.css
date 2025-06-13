@@ -60,7 +60,7 @@ a img {
   width: 100%;
   margin-top: 5%;
   padding-right: 40%;
-  padding-left: 10%;
+  padding-left: 18%;
 }
 .logo img {
   width: 320px;
@@ -86,10 +86,11 @@ a img {
 }
 
 .btn_reservas {
-  width: 32%;
+  
+  width: 35%;
   margin: 0% 38% 0% 30%;
   text-align: center;
-  padding: 2% 2% 2% 2%;
+  padding: 2.5%;
   color: rgb(255, 94, 0);
   font-size: 140%;
   border-radius: 30px;
