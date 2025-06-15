@@ -86,7 +86,6 @@ a img {
 }
 
 .btn_reservas {
-  
   width: 35%;
   margin: 0% 38% 0% 30%;
   text-align: center;
@@ -95,7 +94,7 @@ a img {
   font-size: 140%;
   border-radius: 30px;
   border: 3px solid rgb(255, 94, 0);
-
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
@@ -123,13 +122,11 @@ a img {
 }
 
 /*PROMOCIONES*/
-
 .linea-promociones{
     display: inline-block;
     border-bottom: 7px solid rgb(252, 248, 5);
     padding-bottom: 7px;
-
-
+    width: 95%;
 }
 
 .titulo-sub-amarillo{         /** TEXTO PRINCIPAL AMARILLO CON NARANJITA**/
@@ -149,10 +146,10 @@ a img {
 }
 
 .subrayado{
-    
     display: inline-block;
     border-bottom: 2px solid rgb(0, 0, 0);
     padding-bottom: 1px;
+    font-weight: bold;
 }
 
 .cont-text-inf{   /** TEXTO DE ABAJO**/
@@ -162,6 +159,7 @@ a img {
     text-align : center;
     padding: 2% 0 4% 0;
     opacity: 83%;
+    font-weight: 500;
 }
  
 
@@ -175,7 +173,6 @@ a img {
   
 
 .cont-img-desayuno{       /** IMAGEN**/
-  
   width: 50%;
   height: 350px;
   overflow: hidden;   
@@ -195,9 +192,9 @@ a img {
   display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid rgb(33, 33, 33);
     border-radius: 30px;
-    width: 50%;
+    width: 48%;
     padding: 20px;             
   }
   
@@ -205,6 +202,7 @@ a img {
     display: flex;            
     justify-content: space-between;
     font-size: 20px;      
+
     margin: auto 0;  
   }
   
@@ -212,7 +210,8 @@ a img {
   .flavor {
     text-align: left;
     width: 75%;
-    padding-left: 10px;        
+    padding-left: 10px;   
+    font-weight: 500;     
   }
   
   
@@ -233,7 +232,7 @@ a img {
   box-sizing: border-box;
 }
 .carrusel_carreras {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;  /* Centra el carrusel */
   padding: 0;
   
@@ -252,7 +251,89 @@ a img {
   display: block; /* Elimina el espacio extra alrededor de la imagen */
   
 }
-/*fin carrucel carreras*/
+/*fin carrusel*/
+
+
+
+
+
+/*Estilo menu de precios*/     
+.agrupador_foto_platillo{
+  margin: 0 auto;
+  width: 95%;
+  max-width: 650px;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 3%;
+  box-shadow: 0 2px 8px rgba(26, 25, 25, 0.219); /* Sombra: desplazamiento-x | desplazamiento-y | desenfoque | propagaciÃ³n | color */
+}
+  
+.tipo_platillo{
+  font-size: 125%;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #1d1c1c;
+  padding: 2%;
+  border-left: solid 10px #ffd016;
+  margin: 0 0 2% 0;
+}
+  
+.cont_collage{
+  width: 100%;
+  height: 200px;
+  background-image: url(collage1.png);
+  background-size: cover; /* Hace que la imagen ocupe todo el espacio disponible */
+  background-position: center;
+  
+}
+
+.cont_platillos {
+  width: 100%;
+  height: 0 auto;
+  padding: 3%;
+}
+.nombre_platillo {
+  display: flex;
+  align-items: baseline; /*  Clave para alinear con el pie de letra */
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 6px;
+}
+  
+.nombre_platillo .name {
+  white-space: nowrap;
+}
+  
+.nombre_platillo .dots {
+  flex-grow: 1;
+  border-bottom: 1px dotted black;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: monospace; /*  Clave para que los puntos sean uniformes */
+  font-size: 16px;
+  line-height: 1;
+}
+  
+.nombre_platillo .dots::before {
+  letter-spacing: 2px;
+}
+  
+.nombre_platillo .precio {
+  white-space: nowrap;
+  padding-left: 8px;
+} /*Fin estilo menu de precios*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -355,12 +436,12 @@ cursor: pointer;
   .btn_reservas {
     width: 70%;
     margin: 10px auto;
+    font-weight: bold;
   }
 
   .btn_reservas p {
     background: rgba(255, 255, 255, 0.6);
     font-size: 120%;
-    
   }
 
 
@@ -393,7 +474,8 @@ cursor: pointer;
 
   .item {
     padding: 5% 0 5% 0;
-    font-size: 15px;        
+    font-size: 110%;
+    font-weight: 500;        
   }
   .cont-text-sup{     /** TEXTO DE ARRIBA**/
     font-size: 17px;
@@ -406,10 +488,10 @@ cursor: pointer;
     
   /*CARRUSEL*/
   .carrusel_carreras {
-    width: 90%;
+    width: 100%;
   }
   .carrusel_portadas {
-    height: 200px;
+    height: 300px;
     margin-bottom: 3%;
   }
 }
@@ -493,7 +575,7 @@ cursor: pointer;
 
   width: clamp(160px, 26vw, 320px);   /* MÁS grande desde el inicio */
   height: clamp(160px, 26vw, 320px);
-  background: linear-gradient(70deg, #ffd13c, #fed0a6, #fed0a6, #fe9e3e, #ffd13c);
+  background: linear-gradient(70deg, #ffa13c, #fed0a6, #fed0a6, #fe9e3e, #ffd13c);
   border-radius: 50%;
   transform: translateY(-50%);
   /* z-index: 0; */
@@ -511,6 +593,7 @@ cursor: pointer;
   background-color: transparent;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+  font-weight: bold;
 }
 
 .circle2 {
@@ -529,10 +612,18 @@ cursor: pointer;
 /*PROMOCIONES DEL MES*/
 .titulo-sub-amarillo{         /** TEXTO PRINCIPAL AMARILLO CON NARANJITA**/
     margin: 5% 0 0 5%;
+
 }
 
 
+  .cont_collage{
+    height: 300px;
 }
+
+
+
+
+}/*fin tabletas*/
 
 
 
@@ -542,8 +633,67 @@ cursor: pointer;
 
 /* Laptops */
 @media (min-width: 1024px) {
-
+.agrupador_foto_platillo{
+  margin: 0 auto;
+  width: 60%;
+  max-width: 650px;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 3%;
+  box-shadow: 0 2px 8px rgba(26, 25, 25, 0.219); /* Sombra: desplazamiento-x | desplazamiento-y | desenfoque | propagaciÃ³n | color */
+} 
+.tipo_platillo{
+  font-size: 125%;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: #1d1c1c;
+  padding: 2%;
+  border-left: solid 10px #ffd016;
+  margin: 0 0 2% 0;
+} 
+.cont_collage{
+  width: 100%;
+  height: 350px;
+  background-image: url(collage1.png);
+  background-size: cover; /* Hace que la imagen ocupe todo el espacio disponible */
+  background-position: center;
+  
 }
+
+.cont_platillos {
+  width: 100%;
+  height: 0 auto;
+  padding: 3%;
+}
+.nombre_platillo {
+  display: flex;
+  align-items: baseline; /*  Clave para alinear con el pie de letra */
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 6px;
+}
+.nombre_platillo .name {
+  white-space: nowrap;
+}  
+.nombre_platillo .dots {
+  flex-grow: 1;
+  border-bottom: 1px dotted black;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: monospace; /*  Clave para que los puntos sean uniformes */
+  font-size: 16px;
+  line-height: 1;
+} 
+.nombre_platillo .dots::before {
+  letter-spacing: 2px;
+} 
+.nombre_platillo .price {
+  white-space: nowrap;
+  padding-left: 8px;
+}
+
+}/*fin laptops*/
 
 /* Escritorio grande */
 @media (min-width: 1440px) {
